@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { Provider } from 'react-redux';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from '../redux/counter/counterSlice';
 
