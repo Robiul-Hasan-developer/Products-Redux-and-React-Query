@@ -87,9 +87,11 @@ const CartComponent = () => {
                                                     return (
                                                         <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={cartIndex}>
                                                             <td className="py-4 text-center pe-6">
-                                                                <div className="flex items-center gap-6 max-w-[310px]">
+                                                                <div className="flex items-center gap-6 max-w-[284px]">
                                                                     <div className="bg-gray-100 rounded-lg flex justify-center items-center max-w-[120px] max-h-[120px]">
-                                                                        <img src={cartItem.thumbnail} alt="" />
+                                                                        <Link href={`/product/${cartItem.id}`}>
+                                                                            <img src={cartItem.thumbnail} alt="" />
+                                                                        </Link>    
                                                                     </div>
                                                                     <div className="text-start">
                                                                         <h6 className="">

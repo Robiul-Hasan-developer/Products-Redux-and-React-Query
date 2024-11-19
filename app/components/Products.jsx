@@ -1,6 +1,6 @@
 "use client"; 
 
-import React from 'react';
+import React, { useState } from 'react';
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import Link from 'next/link';
 import { ShoppingCart, SmileySad, Star } from '@phosphor-icons/react';
@@ -62,7 +62,6 @@ const Products = () => {
     const skip = parseInt(searchParams.get('skip') || '0');
     const q = searchParams.get('q') || '';
     const category = searchParams.get('category') || '';
-    
 
     // ******************************* Query Start *******************************
     // Product Query
@@ -138,11 +137,10 @@ const Products = () => {
             {/* Filter Search Start */}
             <div className="flex justify-between flex-wrap gap-6 md:gap-10 mb-8">
                 <div className="flex items-center gap-6 flex-wrap grow">
-                    <h4 className="font-semibold mb-0">Search: </h4>
                     <input
                         type="text"
                         className="bg-white h-[56px] rounded-lg py-4 px-6 border border-gray-300 focus:border-orange-600 focus:outline-none col-span-12 sm:col-span-6 flex-grow text-xl"
-                        placeholder="Search Products Here...."
+                        placeholder="Search Product...."
                         onChange={handleSearchProduct}
                         defaultValue={q} 
                     />
@@ -150,7 +148,6 @@ const Products = () => {
 
                 <div className="flex items-center gap-6 flex-wrap">
                     <h1 className="font-semibold mb-0 text-xl">Filter By Category: </h1>
-
                     <select 
                         className='bg-white h-[56px] rounded-lg px-4 border border-gray-300 focus:border-orange-600 focus:outline-none col-span-12 sm:col-span-6 flex-grow'
                         onChange={handleCategory}
@@ -162,12 +159,10 @@ const Products = () => {
                             </option>
                         ))}
                     </select>
-
                 </div>
             </div>
             {/* Filter Search End */}
 
-            
             {/* Products Start */}
             {data?.products.length !== 0 ? (
                 <>
@@ -250,4 +245,3 @@ const Products = () => {
 };
 
 export default Products;
-

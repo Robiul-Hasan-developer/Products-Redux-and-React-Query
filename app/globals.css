@@ -48,3 +48,7 @@
 .qty-count {
   -moz-appearance: textfield;
 }
+
+input:focus, select:focus {
+  @apply outline-0 ring-0 focus:ring-0;
+}

@@ -33,11 +33,11 @@ const Navbar = () => {
                                 Cart
                             </span>
                         </Link>
-                        <Link href='/counter' className="">
+                        {/* <Link href='/counter' className="">
                             <span className={`inline-block px-6 py-2.5 font-semibold text-base hover:bg-gray-200 hover:text-gray-900 rounded-lg ${pathname.startsWith('/counter') ? 'bg-orange-600 hover:bg-orange-700 text-white hover:text-white' : ''} `}>
                                 Counter
                             </span>
-                        </Link>
+                        </Link> */}
                     </div>
 
                     <Link href='/cart' className="text-gray-600 relative hover:text-orange-600 transition-all duration-200 active:scale-90">
